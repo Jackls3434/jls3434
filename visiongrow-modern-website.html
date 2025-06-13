@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisionGrow Marketing</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(45deg, #1e3a8a, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-8px);
+    }
+    
+    .pulse-animation {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-900 to-purple-700 text-white p-6 shadow-lg fixed w-full top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-3xl font-extrabold tracking-wide">🚀 VisionGrow</h1>
+      <nav class="space-x-6 text-lg">
+        <a href="#home" class="hover:underline transition-all duration-300">Home</a>
+        <a href="#services" class="hover:underline transition-all duration-300">Services</a>
+        <a href="#about" class="hover:underline transition-all duration-300">About</a>
+        <a href="#contact" class="hover:underline transition-all duration-300">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="bg-gray-100 py-20 text-center relative mt-20">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-5xl font-extrabold mb-4 leading-tight gradient-text">Marketing That Moves the World</h2>
+      <p class="text-xl mb-8 text-gray-700">Unlock your brand's full potential with bold strategy, killer design, and campaigns that convert.</p>
+      <a href="#contact" class="bg-purple-700 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:bg-purple-600 transition duration-300 hover-lift inline-block">Let's Talk</a>
+    </div>
+    <div class="mt-12 flex justify-center">
+      <div id="lottie-animation" class="floating" style="width: 300px; height: 300px;">
+        <!-- Fallback animation -->
+        <div class="w-72 h-72 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white text-6xl pulse-animation">
+          📈
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-white max-w-6xl mx-auto px-4">
+    <h3 class="text-4xl font-bold text-center mb-12 text-blue-800">Our Superpowers</h3>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="bg-gradient-to-br from-blue-100 to-blue-200 shadow-xl p-6 rounded-xl hover:scale-105 transition duration-300 hover-lift">
+        <h4 class="text-2xl font-bold mb-2">💡 Brand Strategy</h4>
+        <p class="text-gray-700">Craft a clear voice and visual identity that sets your business apart and drives loyalty.</p>
+      </div>
+      <div class="bg-gradient-to-br from-purple-100 to-purple-200 shadow-xl p-6 rounded-xl hover:scale-105 transition duration-300 hover-lift">
+        <h4 class="text-2xl font-bold mb-2">📱 Social Media Marketing</h4>
+        <p class="text-gray-700">Create viral content and build communities on platforms your audience lives on.</p>
+      </div>
+      <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 shadow-xl p-6 rounded-xl hover:scale-105 transition duration-300 hover-lift">
+        <h4 class="text-2xl font-bold mb-2">🎬 Content Creation</h4>
+        <p class="text-gray-700">Photos, videos, graphics, blogs — high-quality content that makes your brand unforgettable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="bg-blue-50 py-20 px-6 text-center">
+    <h3 class="text-4xl font-bold mb-6 text-blue-900">Who We Are</h3>
+    <p class="max-w-3xl mx-auto text-lg">We're a crew of creative hustlers, digital natives, and growth-minded strategists. We don't believe in boring. We believe in bold. We've helped brands go from invisible to irresistible. Now it's your turn.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 max-w-3xl mx-auto px-4 text-center">
+    <h3 class="text-4xl font-bold text-blue-800 mb-8">Let's Create Something Epic</h3>
+    <form class="space-y-6" onsubmit="handleFormSubmit(event)">
+      <input type="text" placeholder="Your Name" class="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300" required />
+      <input type="email" placeholder="Your Email" class="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300" required />
+      <textarea placeholder="What's your big idea?" class="w-full p-4 border border-gray-300 rounded-lg shadow-sm h-40 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300" required></textarea>
+      <button type="submit" class="bg-blue-900 text-white px-8 py-4 rounded-full text-lg hover:bg-blue-700 transition duration-300 shadow-lg hover-lift">Send It</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center p-6">
+    <p class="text-sm">&copy; 2025 VisionGrow Marketing. No BS, just business.</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Form submission handler
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const button = form.querySelector('button[type="submit"]');
+      
+      button.textContent = 'Sending...';
+      button.disabled = true;
+      
+      setTimeout(() => {
+        alert('Thanks for reaching out! We\'ll get back to you with some epic ideas soon! 🚀');
+        form.reset();
+        button.textContent = 'Send It';
+        button.disabled = false;
+      }, 1500);
+    }
+
+    // Add scroll effect to header
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if (window.scrollY > 100) {
+        header.style.backgroundColor = 'rgba(30, 58, 138, 0.95)';
+      } else {
+        header.style.background = 'linear-gradient(to right, #1e3a8a, #7c3aed)';
+      }
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe service cards for entrance animations
+    document.querySelectorAll('#services > div > div').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = 'all 0.6s ease';
+      observer.observe(card);
+    });
+
+    // Simple fallback animation setup
+    document.addEventListener('DOMContentLoaded', function() {
+      const animationContainer = document.getElementById('lottie-animation');
+      
+      // Add some interactive behavior to the fallback animation
+      const fallbackElement = animationContainer.querySelector('div');
+      if (fallbackElement) {
+        setInterval(() => {
+          fallbackElement.style.transform = `rotate(${Math.random() * 20 - 10}deg) scale(${0.9 + Math.random() * 0.2})`;
+        }, 2000);
+      }
+    });
+  </script>
+
+</body>
+</html>
